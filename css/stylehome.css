@@ -2108,10 +2108,11 @@ smart phone
     }
 
     .heading_blog {
-        margin: 0 50px;
+        margin: 0 25px;
         padding: 20px;
         text-align: center;
         margin-bottom: 20px;
+        background: yellow;
     }
 
     .heading_blog h2 {
