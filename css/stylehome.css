@@ -2181,7 +2181,7 @@ smart phone
 
     .service_section {
         width: 100%;
-        height: 80vh;
+        height: 120vh;
         display: block;
         margin-bottom: 4800px;
     }
@@ -2197,7 +2197,7 @@ smart phone
 
     .service_container {
         display: flex;
-        margin: 0 100px 5px;
+        margin: 0 50px 5px;
         gap: 2rem;
         flex-direction: column;
     }
@@ -2277,7 +2277,7 @@ smart phone
 
     .contact_section {
         width: 100%;
-        height: 80vh;
+        height: 110vh;
         background: #F5F5F5;
         margin-bottom: 300px;
     }
@@ -2295,7 +2295,7 @@ smart phone
         width: 86%;
         height: 60vh;
         /* background: greenyellow; */
-        margin: 0px 100px;
+        margin: 0px 70px;
         align-items: center;
         display: block;
         text-align: center;
@@ -2370,13 +2370,13 @@ smart phone
     }
     
     .col-contact .send-contact {
-        width: 35%;
+        width: 40%;
         background: #e93f1a;
         color: #fff;
         font-size: 1.8rem;
         font-weight: 600;
         cursor: pointer;
-        margin-left: 10px;
+        margin-left: -33px;
         border-radius: 10px;
         margin-top: 10px;
     }
