@@ -2112,11 +2112,11 @@ smart phone
         padding: 20px;
         text-align: center;
         margin-bottom: 20px;
-        background: yellow;
+        /* background: yellow; */
     }
 
     .heading_blog h2 {
-        font-size: 35px;
+        font-size: 25px;
         text-decoration: underline;
         padding: 10px 0;
     }
@@ -2124,7 +2124,7 @@ smart phone
     .blog_group {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 70px;
+        margin: 0 30px;
         padding: 1px;
     }
 
