@@ -2115,7 +2115,7 @@ smart phone
     }
 
     .heading_blog h2 {
-        font-size: 25px;
+        font-size: 35px;
         text-decoration: underline;
         padding: 10px 0;
     }
@@ -2123,7 +2123,7 @@ smart phone
     .blog_group {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 70px;
+        margin: 0 50px;
         padding: 1px;
     }
 
