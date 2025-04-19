@@ -2123,12 +2123,12 @@ smart phone
     .blog_group {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin: 0 50px;
+        margin: 0 70px;
         padding: 1px;
     }
 
     .blog_card {
-        margin: 10px;
+        margin: 5px;
         background: #fff;
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
@@ -2137,7 +2137,7 @@ smart phone
     }
 
     .blog_card .box-container-blog .box .image img {
-        width: 420px;
+        width: 320px;
         height: 300px;
         object-fit: cover;
         border-top-right-radius: 20px;
