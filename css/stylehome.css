@@ -1733,9 +1733,9 @@ Tablet
 
     .service_section {
         width: 100%;
-        height: 75vh;
+        height: 67vh;
         display: block;
-        margin-bottom: 2000px;
+        margin-bottom: 2600px;
     }
 
     .service_header {
@@ -1750,10 +1750,6 @@ Tablet
     .service_container {
         display: flex;
         margin: 0 100px 5px;
-        /* margin-top: 0; */
-        /* margin-left: 100px; */
-        /* margin-right: 100px; */
-        /* margin-bottom: 50px; */
         gap: 2rem;
         flex-direction: column;
     }
