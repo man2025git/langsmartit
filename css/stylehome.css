@@ -1792,7 +1792,7 @@ Tablet
 
     .detail-service {
         width: 50%;
-        height: 70vh;
+        height: 80vh;
         border: 1px solid black;
         padding: 30px;
     }
@@ -1800,7 +1800,7 @@ Tablet
     .img-service {
         display: flex;
         width: 50%;
-        height: 70vh;
+        height: 80vh;
         align-items: center;
         justify-content: center;
     }
