@@ -1467,10 +1467,10 @@ pc
 Tablet
 */
 @media (max-width:1200px) and (min-width:769px) {
-    /* html {
-        background-color: yellow;
-        width: 769px;
-    } */
+    html {
+        /* background-color: yellow; */
+        zoom: 50%;
+    }
 
     .header_section {
         /* width: 100%; */
@@ -1941,9 +1941,10 @@ Tablet
 smart phone
 */
 @media (max-width:768px) {
-    /* html {
-        background-color: gray;
-    } */
+    html {
+        /* background-color: gray; */
+        zoom: 100%;
+    }
 
     .header_section {
         width: 100%;
