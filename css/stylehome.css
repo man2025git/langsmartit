@@ -1479,7 +1479,7 @@ Tablet
         overflow-y: scroll;
         scroll-padding-top: 7rem;
         scroll-behavior: smooth;
-        transform: scale(0.5);
+        width: 1200px;
     }
     
     body {
@@ -1487,15 +1487,14 @@ Tablet
     }
 
     .header_section {
-        /* width: 100%; */
-        width: 1200px;
+        width: 100%;
         height: 85vh;
         padding: 1.5rem 7%;
         background-image: url(../images/hero-bg.jpg);
         background-size: cover;
         /* display: block; */
         /* background: yellow; */
-        margin-bottom: 200px;
+        margin-bottom: 80px;
 
     }
 
@@ -1656,7 +1655,7 @@ Tablet
 
     .blog_section {
         width: 100%;
-        height: 280vh;
+        height: 300vh;
         background: #e6e0e0;
     }
 
@@ -1690,7 +1689,7 @@ Tablet
     }
 
     .blog_card .box-container-blog .box .image img {
-        width: 320px;
+        width: 335px;
         height: 300px;
         object-fit: cover;
         border-top-right-radius: 20px;
