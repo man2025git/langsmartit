@@ -1481,6 +1481,7 @@ Tablet
         background-size: cover;
         /* display: block; */
         /* background: yellow; */
+        margin-bottom: 200px;
     }
 
     .menubar {
@@ -1966,7 +1967,7 @@ smart phone
     }
 
     header {
-        margin-bottom: 90px;
+        margin-bottom: 130px;
     }
 
     .menubar {
@@ -2147,7 +2148,7 @@ smart phone
 
     .box-about p {
         text-align: start;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .get-start-about {
@@ -2181,8 +2182,9 @@ smart phone
 
     .blog_section {
         width: 100%;
-        height: 540vh;
+        height: 570vh;
         background: #e6e0e0;
+        margin-bottom: 10px;
     }
 
     .heading_blog {
@@ -2229,12 +2231,13 @@ smart phone
     }
 
     .blog_card .box-container-blog .box .blog-card-content h3 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .blog_card .box-container-blog .box .blog-card-content p {
-        font-size: 1.25rem;
+        font-size: 0.8rem;
         height: 100px;
+        margin-bottom: 15px
     }
 
     .blog_card .box-container-blog .box .blog-card-content .blog-read-more {
@@ -2259,7 +2262,7 @@ smart phone
 
     .service_section {
         width: 100%;
-        height: 120vh;
+        height: 130vh;
         display: block;
         margin-bottom: 4800px;
     }
@@ -2451,7 +2454,7 @@ smart phone
         width: 40%;
         background: #e93f1a;
         color: #fff;
-        font-size: 1.8rem;
+        font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         margin-left: -33px;
