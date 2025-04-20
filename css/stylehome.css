@@ -1655,7 +1655,7 @@ Tablet
 
     .blog_section {
         width: 100%;
-        height: 500vh;
+        height: 490vh;
         background: #e6e0e0;
         margin-bottom: 10px;
     }
@@ -1735,7 +1735,7 @@ Tablet
         width: 100%;
         height: 67vh;
         display: block;
-        margin-bottom: 2600px;
+        margin-bottom: 3000px;
     }
 
     .service_header {
@@ -1842,6 +1842,7 @@ Tablet
     .contact_container {
         width: 86%;
         height: 60vh;
+        margin-top: 20px;
         /* background: greenyellow; */
         margin: 0px 100px;
         align-items: center;
