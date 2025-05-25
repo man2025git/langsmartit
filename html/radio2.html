@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom Radio Button (สีเริ่มต้นแดง)</title>
+<style>
+  .radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white; /* สีพื้นหลังเริ่มต้น */
+    border-radius: 50%;
+    border: 1px solid red; /* สีขอบเริ่มต้นเป็นแดง */
+  }
+
+  .radio-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .radio-container input:checked ~ .checkmark {
+    background-color: white;
+    border: 1px solid blue; /* สีขอบเมื่อถูกเลือก (ตัวอย่าง) */
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radio-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: blue; /* จุดสีเมื่อถูกเลือก (ตัวอย่าง) */
+  }
+</style>
+</head>
+<body>
+
+  <label class="radio-container">ชาย
+    <input type="radio" id="male" name="gender" value="male">
+    <span class="checkmark"></span>
+  </label>
+
+  <label class="radio-container">หญิง
+    <input type="radio" id="female" name="gender" value="female">
+    <span class="checkmark"></span>
+  </label>
+
+</body>
+</html>

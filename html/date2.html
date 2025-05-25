@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ซ่อน Input Type Date และแสดงใน Element อื่น</title>
+<style>
+  #birthday {
+    display: none; /* ซ่อน Input Type Date */
+  }
+</style>
+</head>
+<body>
+
+  <label for="birthday">เลือกวันเกิด:</label>
+  <input type="date" id="birthday" name="birthday">
+  <span id="displayBirthday"></span>
+
+  <script>
+    const birthdayInput = document.getElementById('birthday');
+    const displayBirthdaySpan = document.getElementById('displayBirthday');
+
+    birthdayInput.addEventListener('change', function() {
+      const selectedDate = new Date(this.value);
+      const day = String(selectedDate.getDate()).padStart(2, '0');
+      const month = String(selectedDate.getMonth() + 1).padStart(2, '0');
+      const year = String(selectedDate.getFullYear());
+      const formattedDate = `${day}/${month}/${year}`;
+      displayBirthdaySpan.textContent = formattedDate;
+    });
+
+    // (ทางเลือก) คุณอาจต้องการแสดงวันที่เริ่มต้น
+    document.addEventListener("DOMContentLoaded", function() {
+      if (birthdayInput.value) {
+        const initialDate = new Date(birthdayInput.value);
+        const day = String(initialDate.getDate()).padStart(2, '0');
+        const month = String(initialDate.getMonth() + 1).padStart(2, '0');
+        const year = String(initialDate.getFullYear());
+        displayBirthdaySpan.textContent = `${day}/${month}/${year}`;
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Type Date (dd/mm/yy)</title>
+</head>
+<body>
+
+  <label for="birthday">วันเกิด:</label>
+  <input type="date" id="birthday" name="birthday">
+  <span id="formattedBirthday"></span>
+
+  <script>
+    const birthdayInput = document.getElementById('birthday');
+    const formattedBirthdaySpan = document.getElementById('formattedBirthday');
+
+    birthdayInput.addEventListener('change', function() {
+      const selectedDate = new Date(this.value);
+      const day = String(selectedDate.getDate()).padStart(2, '0');
+      const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+      const year = String(selectedDate.getFullYear()).slice(-2); // Get last two digits of year
+
+      const formattedDate = `${day}/${month}/${year}`;
+      formattedBirthdaySpan.textContent = ` (${formattedDate})`; // แสดงข้างๆ Input
+      // หรือคุณอาจต้องการอัปเดต value ของ Input เอง (แต่จะไม่ใช่ format date ที่ browser เข้าใจ)
+      // this.value = formattedDate;
+    });
+  </script>
+
+</body>
+</html>

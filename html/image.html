@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>เกมคลิกภาพ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #gameCanvas {
+      border: 1px solid black;
+      cursor: crosshair;
+      /* เปลี่ยนเคอร์เซอร์ให้ดูเหมือนเป้า */
+    }
+
+    #message {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>เกมคลิกเป้า</h1>
+
+  <canvas id="gameCanvas" width="400" height="300"></canvas>
+  <div id="message">คลิกที่ภาพ!</div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const messageDiv = document.getElementById('message');
+    const targetRadius = 15;
+    let targetX;
+    let targetY;
+    let score = 0;
+
+    function getRandomPosition() {
+      const x = Math.random() * (canvas.width - 2 * targetRadius) + targetRadius;
+      const y = Math.random() * (canvas.height - 2 * targetRadius) + targetRadius;
+      return { x, y };
+    }
+
+    function drawTarget() {
+      ctx.beginPath();
+      ctx.arc(targetX, targetY, targetRadius, 0, Math.PI * 2);
+      ctx.fillStyle = 'red';
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    function updateScore() {
+      messageDiv.textContent = `คะแนน: ${score}`;
+    }
+
+    function resetGame() {
+      score = 0;
+      updateScore();
+      const position = getRandomPosition();
+      targetX = position.x;
+      targetY = position.y;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawTarget();
+    }
+
+    canvas.addEventListener('click', function (event) {
+      const rect = canvas.getBoundingClientRect();
+      const clickX = event.clientX - rect.left; // ตำแหน่ง x ที่คลิกบน Canvas
+      const clickY = event.clientY - rect.top;  // ตำแหน่ง y ที่คลิกบน Canvas
+
+      const distance = Math.sqrt(Math.pow(clickX - targetX, 2) + Math.pow(clickY - targetY, 2));
+
+      if (distance < targetRadius) {
+        messageDiv.textContent = 'เยี่ยม! คลิกถูกเป้า!';
+        score++;
+        updateScore();
+        setTimeout(resetGame, 1000); // สร้างเป้าใหม่หลังจาก 1 วินาที
+      } else {
+        messageDiv.textContent = 'พลาดเป้า! ลองอีกครั้ง.';
+      }
+    });
+
+    // เริ่มเกมครั้งแรก
+    resetGame();
+  </script>
+
+</body>
+
+</html>

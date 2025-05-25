@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>จำกัดการอัปโหลดเฉพาะ .jpeg (Client-side)</title>
+</head>
+<body>
+
+<form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+  <label for="uploadFile">เลือกไฟล์ JPEG เท่านั้น:</label>
+  <input type="file" name="uploadFile" id="uploadFile" accept="image/jpeg"><br><br>
+  <button type="submit">อัปโหลด</button>
+  <p id="errorMessage" style="color: red;"></p>
+</form>
+
+<script>
+const uploadForm = document.getElementById('uploadForm');
+const uploadInput = document.getElementById('uploadFile');
+const errorMessage = document.getElementById('errorMessage');
+
+uploadForm.addEventListener('submit', function(event) {
+  errorMessage.textContent = ''; // เคลียร์ข้อความผิดพลาดก่อนตรวจสอบ
+
+  if (uploadInput.files.length > 0) {
+    const selectedFile = uploadInput.files[0];
+    const allowedExtensions = ['.jpeg', '.jpg']; // เพิ่ม .jpg เผื่อกรณี
+    const fileExtension = selectedFile.name.toLowerCase().slice(((selectedFile.name.lastIndexOf(".") - 1) >>> 0) + 2);
+
+    if (!allowedExtensions.includes('.' + fileExtension)) {
+      errorMessage.textContent = 'กรุณาเลือกไฟล์ที่มีนามสกุล .jpeg หรือ .jpg เท่านั้น';
+      event.preventDefault(); // ป้องกันการ Submit Form หากไฟล์ไม่ถูกต้อง
+    }
+  }
+});
+</script>
+
+</body>
+</html>

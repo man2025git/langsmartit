@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ควบคุมการเลือก Radio Button</title>
+</head>
+<body>
+
+  <div>
+    เพศ:<br>
+    <input type="radio" id="male" name="gender" value="male" onclick="updatePrefixOptions()"> ชาย<br>
+    <input type="radio" id="female" name="gender" value="female" onclick="updatePrefixOptions()"> หญิง
+  </div>
+
+  <br>
+
+  <div>
+    คำนำหน้า:<br>
+    <input type="radio" id="boy" name="Prefix" value="boy" onclick="checkPrefixCompatibility(this)"> เด็กชาย<br>
+    <input type="radio" id="girl" name="Prefix" value="girl" onclick="checkPrefixCompatibility(this)"> เด็กหญิง<br>
+    <input type="radio" id="mr" name="Prefix" value="mr" onclick="checkPrefixCompatibility(this)"> นาย<br>
+    <input type="radio" id="miss" name="Prefix" value="miss" onclick="checkPrefixCompatibility(this)"> นางสาว<br>
+    <input type="radio" id="mrs" name="Prefix" value="mrs" onclick="checkPrefixCompatibility(this)"> นาง
+  </div>
+
+  <script>
+    let selectedGender = null; // ตัวแปรเก็บเพศที่ถูกเลือก
+
+    function updatePrefixOptions() {
+      const maleRadio = document.getElementById('male');
+      const femaleRadio = document.getElementById('female');
+
+      selectedGender = maleRadio.checked ? 'male' : (femaleRadio.checked ? 'female' : null);
+
+      // ยกเลิกการเลือกคำนำหน้าทั้งหมดเมื่อเปลี่ยนเพศ
+      const prefixRadios = document.querySelectorAll('input[name="Prefix"]');
+      prefixRadios.forEach(radio => {
+        radio.checked = false;
+      });
+    }
+
+    function checkPrefixCompatibility(clickedPrefixRadio) {
+      if (selectedGender === 'male') {
+        if (clickedPrefixRadio.value === 'girl' || clickedPrefixRadio.value === 'miss' || clickedPrefixRadio.value === 'mrs') {
+          alert("คำนำหน้าไม่สอดคล้องกับเพศชาย กรุณาเลือกใหม่");
+          clickedPrefixRadio.checked = false; // ยกเลิกการเลือก
+        }
+      } else if (selectedGender === 'female') {
+        if (clickedPrefixRadio.value === 'boy' || clickedPrefixRadio.value === 'mr') {
+          alert("คำนำหน้าไม่สอดคล้องกับเพศหญิง กรุณาเลือกใหม่");
+          clickedPrefixRadio.checked = false; // ยกเลิกการเลือก
+        }
+      }
+    }
+
+    // เรียกฟังก์ชัน updatePrefixOptions ครั้งแรกเมื่อหน้าโหลด
+    const initialMaleRadio = document.getElementById('male');
+    const initialFemaleRadio = document.getElementById('female');
+    if (initialMaleRadio.checked) {
+      selectedGender = 'male';
+    } else if (initialFemaleRadio.checked) {
+      selectedGender = 'female';
+    }
+  </script>
+
+</body>
+</html>

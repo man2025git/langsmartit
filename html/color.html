@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input Type Color</title>
+    <style>
+        body {
+          transition: background-color 0.5s ease; /* เพิ่ม Transition เพื่อความนุ่มนวล */
+        }
+      </style>
+</head>
+<body>
+    
+        <h1>เลือกสีพื้นหลัง</h1>
+
+        <label for="backgroundColor">เลือกสี:</label>
+        <input type="color" id="backgroundColor"  value="#f0f0f0">
+        <button onclick="changeBackgroundColor()">ใช้สีนี้</button>
+
+        <script>
+            function changeBackgroundColor() {
+                const colorPicker = document.getElementById("backgroundColor");
+                const selectedColor = colorPicker.value;
+                document.body.style.backgroundColor = selectedColor;
+            }
+
+            // ตั้งค่าสีเริ่มต้นเมื่อโหลดหน้าเว็บ (ตรงกับค่าเริ่มต้นของ input color)
+            document.addEventListener("DOMContentLoaded", function () {
+                document.body.style.backgroundColor = document.getElementById("backgroundColor").value;
+            });
+        </script>
+
+</body>
+</html>

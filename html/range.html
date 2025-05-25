@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>input type time</title>
+</head>
+<body>
+    
+<label for="priceRange">ช่วงราคา:</label>
+<input type="range" id="priceRange" name="priceRange" min="100" max="1000" step="50" value="300">
+<output id="priceValue">300</output> บาท
+
+<script>
+  const priceRange = document.getElementById("priceRange");
+  const priceValue = document.getElementById("priceValue");
+
+  priceRange.addEventListener("input", function() {
+    priceValue.textContent = priceRange.value;
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Range Slider with Ticks</title>
+<style>
+.range-container {
+  position: relative;
+  width: 300px; /* ปรับขนาดตามต้องการ */
+  margin: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.range-ticks {
+  position: absolute;
+  top: 20px; /* ปรับตำแหน่งตามความสูงของแถบเลื่อน */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  pointer-events: none; /* ไม่ให้ ticks บังการเลื่อน */
+}
+
+.range-ticks li {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  flex-grow: 1;
+  max-width: 1px; /* ทำให้เป็นเส้น */
+  background-color: #ccc;
+  height: 5px; /* ความสูงของเส้น */
+}
+
+.range-ticks li span {
+  position: absolute;
+  top: 10px; /* ปรับตำแหน่งตัวเลข */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+}
+</style>
+</head>
+<body>
+
+<div class="range-container">
+  <input type="range" id="myRange" min="0" max="100" step="20" value="50">
+  <ul class="range-ticks" id="tickMarks">
+    </ul>
+</div>
+
+<script>
+const range = document.getElementById("myRange");
+const tickMarks = document.getElementById("tickMarks");
+
+const min = parseInt(range.min);
+const max = parseInt(range.max);
+const step = parseInt(range.step);
+
+const totalTicks = (max - min) / step + 1;
+
+for (let i = 0; i < totalTicks; i++) {
+  const tick = document.createElement("li");
+  const value = min + i * step;
+
+  // แสดงตัวเลขเฉพาะบาง ticks (ปรับตามต้องการ)
+  if (i === 0 || i === totalTicks - 1 || (totalTicks <= 10 && i % 1 === 0) || (totalTicks > 10 && i % Math.floor(totalTicks / 5) === 0)) {
+    const span = document.createElement("span");
+    span.textContent = value;
+    tick.appendChild(span);
+  }
+
+  tickMarks.appendChild(tick);
+}
+</script>
+
+</body>
+</html> -->
+

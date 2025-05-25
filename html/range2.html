@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>แถบเลื่อนแนวตั้งพร้อมสเกลและปุ่มเลื่อนเอง</title>
+    <style>
+        .range-container {
+            position: relative;
+            width: 30px;
+            height: 150px;
+            margin: 20px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transform: rotate(-90deg);
+            transform-origin: center center;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: none;
+        }
+
+        .custom-thumb {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .range-ticks-vertical {
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            pointer-events: none;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .range-ticks-vertical span {
+            font-size: 0.7em;
+            position: relative;
+            transform: translateY(-50%);
+        }
+
+        .range-ticks-vertical span::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 1px;
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="range-container">
+        <input type="range" id="verticalRange" min="0" max="100" step="10" value="50">
+        <div class="custom-thumb" id="sliderThumb"></div>
+        <div class="range-ticks-vertical" id="verticalTickMarks">
+            <span>0</span>
+            <span>10</span>
+            <span>20</span>
+            <span>30</span>
+            <span>40</span>
+            <span>50</span>
+            <span>60</span>
+            <span>70</span>
+            <span>80</span>
+            <span>90</span>
+            <span>100</span>
+        </div>
+    </div>
+
+    <script>
+        const range = document.getElementById("verticalRange");
+        const sliderThumb = document.getElementById("sliderThumb");
+        const rangeContainer = document.querySelector('.range-container');
+        const containerHeight = rangeContainer.offsetHeight;
+        const tickElements = document.querySelectorAll('.range-ticks-vertical span');
+
+        const min = parseInt(range.min);
+        const max = parseInt(range.max);
+
+        function updateThumbPosition() {
+            const value = parseInt(range.value);
+            const percentage = (value - min) / (max - min);
+            const thumbPosition = percentage * containerHeight;
+            const visualTop = containerHeight - thumbPosition;
+            sliderThumb.style.top = `${visualTop - (sliderThumb.offsetHeight / 2)}px`;
+        }
+
+        function updateTickPositions() {
+            if (tickElements.length > 0) {
+                tickElements[0].style.top = "0";
+                tickElements[0].style.transform = "translateY(0) rotate(90deg) rotateY(180deg)";
+                tickElements[0].style.left = "-35px";
+                tickElements[0].style.alignSelf = "flex-end";
+
+                tickElements[tickElements.length - 1].style.top = "100%";
+                tickElements[tickElements.length - 1].style.transform = "translateY(-100%) rotate(90deg) rotateY(180deg)";
+                tickElements[tickElements.length - 1].style.left = "-35px";
+                tickElements[tickElements.length - 1].style.alignSelf = "flex-end";
+
+                const totalTicks = tickElements.length;
+                if (totalTicks > 2) {
+                    for (let i = 1; i < totalTicks - 1; i++) {
+                        const percentage = (i / (totalTicks - 1)) * 100;
+                        tickElements[i].style.top = `${percentage}%`;
+                        tickElements[i].style.transform = "translateY(-50%) rotate(90deg) rotateY(180deg)";
+                        tickElements[i].style.left = "-35px";
+                        tickElements[i].style.alignSelf = "flex-end";
+                    }
+                }
+            }
+        }
+
+        // Initial setup
+        updateThumbPosition();
+        updateTickPositions();
+
+        range.addEventListener("input", function() {
+            updateThumbPosition();
+        });
+
+        range.addEventListener("change", function() {
+            updateThumbPosition();
+        });
+
+        window.addEventListener('resize', () => {
+            updateThumbPosition();
+            updateTickPositions();
+        });
+    </script>
+
+</body>
+</html>

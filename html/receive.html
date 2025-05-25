@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>ค่าของ 'fr' คือ: <span id="frValue"></span></p>
+
+    <script>
+        // ดึงค่าพารามิเตอร์ 'fr' จาก URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const fr = urlParams.get('fr');
+
+        // แสดงค่า 'fr' ใน element ที่มี id="frValue"
+        document.getElementById('frValue').textContent = fr;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datetime Offset with Flatpickr (Thai)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
+</head>
+<body>
+
+    <h1>Datetime Offset with Flatpickr (Thai)</h1>
+
+    <label for="datetimeOffsetInput">เลือกวันที่และเวลา (พร้อม Timezone):</label>
+    <input type="text" id="datetimeOffsetInput" name="datetimeOffset" placeholder="YYYY-MM-DDTHH:MM:SSZ">
+
+    <div id="selectedDatetime"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/plugins/timeZone/timeZone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/th.js"></script> <script>
+        flatpickr("#datetimeOffsetInput", {
+            enableTime: true,
+            enableSeconds: true,
+            plugins: [new TimeZonePlugin()],
+            dateFormat: "Y-m-d H:i:SZ",
+            altInput: true,
+            altFormat: "d/m/Y H:i K (Z)",
+            locale: 'th', // กำหนดให้แสดงเป็นภาษาไทย
+            onChange: function(selectedDates, dateStr, instance) {
+                const selectedDatetimeDiv = document.getElementById("selectedDatetime");
+                if (selectedDates.length > 0) {
+                    selectedDatetimeDiv.textContent = "วันที่และเวลาที่เลือก (ISO 8601): " + instance.input.value;
+                } else {
+                    selectedDatetimeDiv.textContent = "";
+                }
+            },
+        });
+    </script>
+
+</body>
+</html>
