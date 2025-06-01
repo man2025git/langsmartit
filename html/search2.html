@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าค้นหาและผลลัพธ์</title>
+</head>
+<body>
+    
+  <h2>ช่องค้นหา</h2>
+
+  <form action="#">
+    <label for="site-search">ค้นหาในเว็บไซต์:</label>
+    <input type="search" id="site-search" name="q" />
+    <input type="submit" value="ค้นหา">
+  </form>
+
+  <hr>
+
+  <h2>ผลลัพธ์การค้นหา</h2>
+
+  <p>คุณได้ป้อนคำค้นหา:</p>
+  <div id="search-term"></div>
+
+  <p>เนื่องจากเป็นเพียงตัวอย่าง HTML ฝั่ง Client เท่านั้น เราจึงไม่สามารถแสดงผลลัพธ์การค้นหาจริงได้</p>
+
+  <script>
+    // ดึงค่าพารามิเตอร์ 'q' จาก URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('q');
+
+    // แสดงคำค้นหาใน div ที่มี id="search-term"
+    if (searchTerm) {
+      document.getElementById('search-term').textContent = searchTerm;
+    } else {
+      document.getElementById('search-term').textContent = "ไม่มีคำค้นหา";
+    }
+  </script>
+
+</body>
+</html>

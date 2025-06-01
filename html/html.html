@@ -1138,10 +1138,20 @@
                   เบราว์เซอร์บางตัวอาจแสดงแป้นตัวเลขบนอุปกรณ์พกพา
                 </li>
                 <li>
-                  number: ช่องสำหรับป้อนตัวเลข สามารถกำหนดค่าต่ำสุด (min), ค่าสูงสุด (max), และขั้น (step) ได้
+                  number: ช่องสำหรับป้อนตัวเลข สามารถกำหนดค่าต่ำสุด (min),
+                  ค่าสูงสุด (max), และขั้น (step) ได้
                 </li>
                 <li>
-                  range: แถบเลื่อนสำหรับเลือกค่าในช่วงที่กำหนด (ต้องมี min และ max)
+                  range: แถบเลื่อนสำหรับเลือกค่าในช่วงที่กำหนด (ต้องมี min และ
+                  max)
+                </li>
+                <li>
+                  search: ช่องสำหรับป้อนคำค้นหา ลักษณะการแสดงผลอาจแตกต่างจาก
+                  text: เล็กน้อย (เช่น มีปุ่มล้างข้อมูล)
+                </li>
+                <li>
+                  url: ช่องสำหรับป้อน URL เบราว์เซอร์ส่วนใหญ่จะตรวจสอบรูปแบบ URL
+                  เบื้องต้น
                 </li>
               </ur>
 
@@ -6822,8 +6832,11 @@
               </p>
               <p>%40 คือ @</p>
 
-              <p>number: ช่องสำหรับป้อนตัวเลข สามารถกำหนดค่าต่ำสุด (min), ค่าสูงสุด (max), และขั้น (step) ได้</p>
-              
+              <p>
+                number: ช่องสำหรับป้อนตัวเลข สามารถกำหนดค่าต่ำสุด (min),
+                ค่าสูงสุด (max), และขั้น (step) ได้
+              </p>
+
               <div class="code-container">
                 <div class="code-header">
                   <div class="logo">input type number</div>
@@ -6967,15 +6980,37 @@
               </div>
 
               <p>tag input type number มี attribute ดังนี้</p>
-              <ul style="list-style: inside;">
-                <li>name="salary": กำหนดชื่อให้กับ input field นี้ ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์</li>
-                <li>min="300": กำหนดค่าต่ำสุดที่อนุญาตให้ป้อนได้ ในกรณีนี้คือ 300 (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม 10.50 บาท หรือ ป้อนเป็นค่าติดลบเช่น -150 บาท เป็นต้น)</li>
-                <li>max="200000": กำหนดค่าสูงสุดที่อนุญาตให้ป้อนได้เป็น 200,000 บาท (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม 20.25 บาท หรือ ป้อนเป็นค่าติดลบเช่น -450 บาท เป็นต้น)</li>
-                <li>step="100": ปรับขั้นต่ำของการเปลี่ยนแปลงค่าเป็น 100 บาท (เพื่อให้ผู้ใช้สามารถปรับเงินเดือนได้ละเอียดขึ้น และสามารถ ป้อนเป็น ทศนิยม 50.50 บาท หรือ ป้อนเป็นค่าติดลบ เช่น -1 บาท เป็นต้น)</li>
-                <li>placeholder: ปรับข้อความให้สอดคล้องกับช่วงของเงินเดือนที่กำหนด</li>
+              <ul style="list-style: inside">
+                <li>
+                  name="salary": กำหนดชื่อให้กับ input field นี้
+                  ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์
+                </li>
+                <li>
+                  min="300": กำหนดค่าต่ำสุดที่อนุญาตให้ป้อนได้ ในกรณีนี้คือ 300
+                  (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม
+                  10.50 บาท หรือ ป้อนเป็นค่าติดลบเช่น -150 บาท เป็นต้น)
+                </li>
+                <li>
+                  max="200000": กำหนดค่าสูงสุดที่อนุญาตให้ป้อนได้เป็น 200,000
+                  บาท (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น
+                  ทศนิยม 20.25 บาท หรือ ป้อนเป็นค่าติดลบเช่น -450 บาท เป็นต้น)
+                </li>
+                <li>
+                  step="100": ปรับขั้นต่ำของการเปลี่ยนแปลงค่าเป็น 100 บาท
+                  (เพื่อให้ผู้ใช้สามารถปรับเงินเดือนได้ละเอียดขึ้น และสามารถ
+                  ป้อนเป็น ทศนิยม 50.50 บาท หรือ ป้อนเป็นค่าติดลบ เช่น -1 บาท
+                  เป็นต้น)
+                </li>
+                <li>
+                  placeholder: ปรับข้อความให้สอดคล้องกับช่วงของเงินเดือนที่กำหนด
+                </li>
               </ul>
-              <p>max เป็นค่าลบ แล้ว min เป็นค่าบวก ไม่สามารถป้อนได้ เพราะจะไม่มีช่วงตัวเลขใดๆ ที่ผู้ใช้สามารถป้อนได้ตามเงื่อนไขทั้งสองพร้อมกัน</p>
-              
+              <p>
+                max เป็นค่าลบ แล้ว min เป็นค่าบวก ไม่สามารถป้อนได้
+                เพราะจะไม่มีช่วงตัวเลขใดๆ
+                ที่ผู้ใช้สามารถป้อนได้ตามเงื่อนไขทั้งสองพร้อมกัน
+              </p>
+
               <div style="background-color: aqua">
                 <form
                   action="#"
@@ -7028,8 +7063,16 @@
                   Pull weekly sales reports:
                   <input type="week" name="weeknum" />
                   <br />
-                  Need salary: 
-                  <input type="number" name="salary" min="300" max="200000" step="100" placeholder="Specify salary (300 - 200,000 THB (step 100))" style="width: 400px;" />
+                  Need salary:
+                  <input
+                    type="number"
+                    name="salary"
+                    min="300"
+                    max="200000"
+                    step="100"
+                    placeholder="Specify salary (300 - 200,000 THB (step 100))"
+                    style="width: 400px"
+                  />
                   <br />
                   Proficient computer language:
                   <br />
@@ -7090,23 +7133,49 @@
                 <br />
               </div>
 
-              <p>เมื่อผู้ใช้นำเมาส์มาคลิกที่ ช่อง salary จะสังเกตุเหตุ ลูกศรชี้บน และ ลูกศรชี้ล้าง</p>
-              <img src="/images/number1.png" alt="">
-              <p>ถ้าผู้ใช้คลิกลูกศรชี้ขึ้นหรือชี้ลง อย่างใดอย่าง จำนวน 1 ครั้ง ก็จะแสดง 300 บาท แต่ในที่นี้ผู้เขียนแนะนำให้เลือกลูกศรชี้ขึ้นก่อน จะแสดงเลข 300 บาท เพราะ Developer กำหนดค่า min ไว้ที่ 300 และถ้าใช้ผู้ใช้คลิกลูกศรชี้ขี้นอีกครั้ง จะแสดงเป็น 400 เพราะ Developer กำหนดค่า step ปรับเพิ่มขึ้น 100</p>
-              <p>ถ้าผู้ใช้กดลูกศรชี้ขี้นต่อเนื่อง ถึง จำนวน 1,997 ครั้ง จะแสดง 200,000 บาท แต่ถ้าใช้กดลูกศรขี้น ครั้งที่ 1,998 ครั้ง ก็จะยังแสดง 200,000 บาท เพราะ Developer ได้กำหนดค่า max ไว้ที่ 200,000 บาท</p>
-              <p>ถ้าใช้กรอกเลขเองเช่น 350 บาท แล้ว กดปุ่ม send จะมีข้อความเตือน</p>
-              <img src="/images/number2.png" alt="">
-              <p>หรือถ้าผู่ใช้กรอกตัวเลขเองที่เป็น ทศนิยม เช่น 400.50 บาท แล้ว กดปุ่ม send จะมีข้อความเตือน</p>
-              <img src="/images/number3.png" alt="">
-              <p>ถ้ากรอกตัวเลขเองโดยไม่กดลูกศรขี้ขึ้นหรือชี้ลง เช่น กรอกเลข 50,000 บาท แล้วกดปุ่ม send ให้มาดู url </p>
               <p>
-                ให้สังเกตุ url ตรง salary จะแสดงเป็น
-                salary=50000&
+                เมื่อผู้ใช้นำเมาส์มาคลิกที่ ช่อง salary จะสังเกตุเหตุ ลูกศรชี้บน
+                และ ลูกศรชี้ล้าง
               </p>
-              <p>ฝาก Developer ช่วยแก้ไข ค่า min , max , step เป็นค่าติดลบ หรือ ทศนิยม แล้วให้สังเกตุ url ว่าแสดงอะไร</p>
+              <img src="/images/number1.png" alt="" />
+              <p>
+                ถ้าผู้ใช้คลิกลูกศรชี้ขึ้นหรือชี้ลง อย่างใดอย่าง จำนวน 1 ครั้ง
+                ก็จะแสดง 300 บาท
+                แต่ในที่นี้ผู้เขียนแนะนำให้เลือกลูกศรชี้ขึ้นก่อน จะแสดงเลข 300
+                บาท เพราะ Developer กำหนดค่า min ไว้ที่ 300
+                และถ้าใช้ผู้ใช้คลิกลูกศรชี้ขี้นอีกครั้ง จะแสดงเป็น 400 เพราะ
+                Developer กำหนดค่า step ปรับเพิ่มขึ้น 100
+              </p>
+              <p>
+                ถ้าผู้ใช้กดลูกศรชี้ขี้นต่อเนื่อง ถึง จำนวน 1,997 ครั้ง จะแสดง
+                200,000 บาท แต่ถ้าใช้กดลูกศรขี้น ครั้งที่ 1,998 ครั้ง
+                ก็จะยังแสดง 200,000 บาท เพราะ Developer ได้กำหนดค่า max ไว้ที่
+                200,000 บาท
+              </p>
+              <p>
+                ถ้าใช้กรอกเลขเองเช่น 350 บาท แล้ว กดปุ่ม send จะมีข้อความเตือน
+              </p>
+              <img src="/images/number2.png" alt="" />
+              <p>
+                หรือถ้าผู่ใช้กรอกตัวเลขเองที่เป็น ทศนิยม เช่น 400.50 บาท แล้ว
+                กดปุ่ม send จะมีข้อความเตือน
+              </p>
+              <img src="/images/number3.png" alt="" />
+              <p>
+                ถ้ากรอกตัวเลขเองโดยไม่กดลูกศรขี้ขึ้นหรือชี้ลง เช่น กรอกเลข
+                50,000 บาท แล้วกดปุ่ม send ให้มาดู url
+              </p>
+              <p>ให้สังเกตุ url ตรง salary จะแสดงเป็น salary=50000&</p>
+              <p>
+                ฝาก Developer ช่วยแก้ไข ค่า min , max , step เป็นค่าติดลบ หรือ
+                ทศนิยม แล้วให้สังเกตุ url ว่าแสดงอะไร
+              </p>
 
-              <p>range: แถบเลื่อนสำหรับเลือกค่าในช่วงที่กำหนด (ต้องมี min และ max)</p>
-              
+              <p>
+                range: แถบเลื่อนสำหรับเลือกค่าในช่วงที่กำหนด (ต้องมี min และ
+                max)
+              </p>
+
               <div class="code-container">
                 <div class="code-header">
                   <div class="logo">input type range</div>
@@ -7264,18 +7333,56 @@
               </div>
 
               <p>tag input type range มี attribute ดังนี้</p>
-              <ul style="list-style: inside;">
-                <li>id="priceRange": คือ กำหนดชื่อให้กับแอตทริบิวต์ชื่อ priceRange ซึ่งเป็นคุณสมบัติมาตรฐานของ HTML ที่ใช้เพื่อกำหนดชื่อเฉพาะให้กับอิลิเมนต์ โดยการตั้งชื่อต้องไม่ซ้ำกับ id อื่นๆ เพื่อให้ภาษา javascript สามารถใช้เมธอด id ต่างๆ เช่น document.getElementById("priceRange") เพื่อเข้าถึงอิลิเมนต์ &lt;input type="range"&gt;</li>
-                <li>name="priceRange": กำหนดชื่อให้กับ input field นี้ ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์</li>
-                <li>min="100": กำหนดค่าต่ำสุดที่อนุญาตให้ป้อนได้ ในกรณีนี้คือ 100 (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม 30.25 บาท หรือ ป้อนเป็นค่าติดลบเช่น -30 บาท เป็นต้น)</li>
-                <li>max="1000": กำหนดค่าสูงสุดที่อนุญาตให้ป้อนได้เป็น 1,000 บาท (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม 50.50 บาท หรือ ป้อนเป็นค่าติดลบเช่น -60 บาท เป็นต้น)</li>
-                <li>step="50": ปรับขั้นต่ำของการเปลี่ยนแปลงค่าเป็น 50 บาท (เพื่อให้ผู้ใช้สามารถปรับเงินเดือนได้ละเอียดขึ้น และสามารถ ป้อนเป็น ทศนิยม 25.25 บาท หรือ ป้อนเป็นค่าติดลบ เช่น -1 บาท เป็นต้น)</li>
-                <li>value="300": กำหนดค่าเริ่มต้นของแถบเลื่อน (slider) ให้อยู่ที่ตำแหน่งที่แสดงค่า 300 เมื่อหน้าเว็บถูกโหลดครั้งแรก</li>
+              <ul style="list-style: inside">
+                <li>
+                  id="priceRange": คือ กำหนดชื่อให้กับแอตทริบิวต์ชื่อ priceRange
+                  ซึ่งเป็นคุณสมบัติมาตรฐานของ HTML
+                  ที่ใช้เพื่อกำหนดชื่อเฉพาะให้กับอิลิเมนต์
+                  โดยการตั้งชื่อต้องไม่ซ้ำกับ id อื่นๆ เพื่อให้ภาษา javascript
+                  สามารถใช้เมธอด id ต่างๆ เช่น
+                  document.getElementById("priceRange") เพื่อเข้าถึงอิลิเมนต์
+                  &lt;input type="range"&gt;
+                </li>
+                <li>
+                  name="priceRange": กำหนดชื่อให้กับ input field นี้
+                  ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์
+                </li>
+                <li>
+                  min="100": กำหนดค่าต่ำสุดที่อนุญาตให้ป้อนได้ ในกรณีนี้คือ 100
+                  (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม
+                  30.25 บาท หรือ ป้อนเป็นค่าติดลบเช่น -30 บาท เป็นต้น)
+                </li>
+                <li>
+                  max="1000": กำหนดค่าสูงสุดที่อนุญาตให้ป้อนได้เป็น 1,000 บาท
+                  (หรือคุณอาจกำหนดเป็นค่าอื่นตามความเหมาะสม เช่น ป้อนเป็น ทศนิยม
+                  50.50 บาท หรือ ป้อนเป็นค่าติดลบเช่น -60 บาท เป็นต้น)
+                </li>
+                <li>
+                  step="50": ปรับขั้นต่ำของการเปลี่ยนแปลงค่าเป็น 50 บาท
+                  (เพื่อให้ผู้ใช้สามารถปรับเงินเดือนได้ละเอียดขึ้น และสามารถ
+                  ป้อนเป็น ทศนิยม 25.25 บาท หรือ ป้อนเป็นค่าติดลบ เช่น -1 บาท
+                  เป็นต้น)
+                </li>
+                <li>
+                  value="300": กำหนดค่าเริ่มต้นของแถบเลื่อน (slider)
+                  ให้อยู่ที่ตำแหน่งที่แสดงค่า 300 เมื่อหน้าเว็บถูกโหลดครั้งแรก
+                </li>
               </ul>
-              <p>max เป็นค่าลบ แล้ว min เป็นค่าบวก ไม่สามารถป้อนได้ เพราะจะไม่มีช่วงตัวเลขใดๆ ที่ผู้ใช้สามารถป้อนได้ตามเงื่อนไขทั้งสองพร้อมกัน</p>
-              <p>คำสังในtag &lt;script&gt; เปิด และ ปิด เป็น ภาษา javascript ผู้อ่านสามารถเรียนรู้เพิ่มเติมใน ภาษา javascript ตาม link นี้ ....</p>
-              <p>คำสังใน tag &lt;output&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....</p>
-              
+              <p>
+                max เป็นค่าลบ แล้ว min เป็นค่าบวก ไม่สามารถป้อนได้
+                เพราะจะไม่มีช่วงตัวเลขใดๆ
+                ที่ผู้ใช้สามารถป้อนได้ตามเงื่อนไขทั้งสองพร้อมกัน
+              </p>
+              <p>
+                คำสังในtag &lt;script&gt; เปิด และ ปิด เป็น ภาษา javascript
+                ผู้อ่านสามารถเรียนรู้เพิ่มเติมใน ภาษา javascript ตาม link นี้
+                ....
+              </p>
+              <p>
+                คำสังใน tag &lt;output&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่
+                link ....
+              </p>
+
               <div style="background-color: aqua">
                 <form
                   action="#"
@@ -7328,18 +7435,34 @@
                   Pull weekly sales reports:
                   <input type="week" name="weeknum" />
                   <br />
-                  Need salary: 
-                  <input type="number" name="salary" min="300" max="200000" step="100" placeholder="Specify salary (300 - 200,000 THB (step 100))" style="width: 400px;" />
+                  Need salary:
+                  <input
+                    type="number"
+                    name="salary"
+                    min="300"
+                    max="200000"
+                    step="100"
+                    placeholder="Specify salary (300 - 200,000 THB (step 100))"
+                    style="width: 400px"
+                  />
                   <br />
-                  Price range: 
-                  <input type="range" id="priceRange" name="priceRange" min="100" max="1000" step="50" value="300" />
+                  Price range:
+                  <input
+                    type="range"
+                    id="priceRange"
+                    name="priceRange"
+                    min="100"
+                    max="1000"
+                    step="50"
+                    value="300"
+                  />
                   <output id="priceValue">300</output> Bath
 
                   <script>
                     const priceRange = document.getElementById("priceRange");
                     const priceValue = document.getElementById("priceValue");
 
-                    priceRange.addEventListener("input", function() {
+                    priceRange.addEventListener("input", function () {
                       priceValue.textContent = priceRange.value;
                     });
                   </script>
@@ -7404,15 +7527,659 @@
                 <br />
               </div>
 
-              <p>เมื่อผู้ใช้กำลังเลือก Price range สังเกตค่าเริ่มต้นที่ 300 บาท และเมื่อ นำเมาส์มาสไลด์เลือนที่ Price range ไปทางขวาที่ละ step จะสังเกตุเห็นว่าจะเพิ่มครั้งละ 50 บาท แต่ถ้าเลือนไปทางซ้ายที่ละ step ก็จะลดลงที่ 50 บาท</p>
-              <p>ถ้าผู้ใช้เลือนตัวเลข เช่น 450 บาท แล้วกดปุ่ม send ให้มาดู url </p>
               <p>
-                ให้สังเกตุ url ตรง priceRange จะแสดงเป็น
-                priceRange=450&
+                เมื่อผู้ใช้กำลังเลือก Price range สังเกตค่าเริ่มต้นที่ 300 บาท
+                และเมื่อ นำเมาส์มาสไลด์เลือนที่ Price range ไปทางขวาที่ละ step
+                จะสังเกตุเห็นว่าจะเพิ่มครั้งละ 50 บาท แต่ถ้าเลือนไปทางซ้ายที่ละ
+                step ก็จะลดลงที่ 50 บาท
+              </p>
+              <p>
+                ถ้าผู้ใช้เลือนตัวเลข เช่น 450 บาท แล้วกดปุ่ม send ให้มาดู url
+              </p>
+              <p>ให้สังเกตุ url ตรง priceRange จะแสดงเป็น priceRange=450&</p>
+
+              <p>
+                ฝาก Developer ช่วยแก้ไข ค่า min , max , step เป็นค่าติดลบ หรือ
+                ทศนิยม แล้วให้สังเกตุ url ว่าแสดงอะไร
               </p>
 
-              <p>ฝาก Developer ช่วยแก้ไข ค่า min , max , step เป็นค่าติดลบ หรือ ทศนิยม แล้วให้สังเกตุ url ว่าแสดงอะไร</p>
+              <p>
+                search: ช่องสำหรับป้อนคำค้นหา ลักษณะการแสดงผลอาจแตกต่างจาก text
+                เล็กน้อย (เช่น มีปุ่มล้างข้อมูล)
+              </p>
+              <p>
+                &lt;input type="search" /&gt; เป็นองค์ประกอบ HTML
+                ที่ใช้สำหรับสร้างช่องให้ผู้ใช้ป้อนคำค้นหา โดยพื้นฐานแล้ว
+                มันทำงานเหมือนกับ &lt;input type="text" &gt;
+                แต่เบราว์เซอร์อาจจะแสดงผลและมีคุณสมบัติเพิ่มเติมที่เกี่ยวข้องกับการค้นหา
+                เช่น ปุ่ม "ล้าง" ในบางเบราว์เซอร์
+              </p>
 
+              <div class="code-container">
+                <div class="code-header">
+                  <div class="logo">input type search</div>
+                  <button class="copy-button">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <div class="code-container">
+                  <pre class="code-block">
+                      <code>
+                          &lt;!DOCTYPE html&gt;<br>
+                          &lt;html lang="en"&gt;<br>
+                          &lt;head&gt;<br>
+                              &lt;title&gt;input type search&lt;/title&gt;<br>
+                          &lt;/head&gt;<br>
+                          &lt;body&gt;<br>
+                              
+                              &lt;h2&gt;Search box&lt;/h2&gt;
+
+                              &lt;form action="#" autocomplete="on" &gt;
+                      
+                                &lt;label for="site-search"&gt;Search on the website:&lt;/label&gt;
+                                &lt;input type="search" id="site-search" name="q" /&gt;
+                                &lt;input type="submit" value="search"&gt;
+
+                              &lt;/form&gt;
+
+                              &lt;hr&gt;
+
+                              &lt;h2&gt;Search results&lt;/h2&gt;
+
+                              &lt;p&gt;You have entered search terms:&lt;/p&gt;
+
+                              &lt;div id="search-term"&gt;&lt;/div&gt;
+
+                              &lt;p&gt;Since this is only a client-side HTML sample, we cannot display actual search results.&lt;/p&gt;
+
+                              &lt;script&gt;
+                                // ดึงค่าพารามิเตอร์ 'q' จาก URL
+                                const urlParams = new URLSearchParams(window.location.search);
+                                const searchTerm = urlParams.get('q');
+
+                                // แสดงคำค้นหาใน div ที่มี id="search-term"
+                                if (searchTerm) {
+                                  document.getElementById('search-term').textContent = searchTerm;
+                                } else {
+                                  document.getElementById('search-term').textContent = "ไม่มีคำค้นหา";
+                                }
+                              &lt;/script&gt;                              
+
+                          &lt;/body&gt;<br>
+                          &lt;/html&gt;
+                      </code>
+                  </pre>
+                </div>
+              </div>
+
+              <p>
+                &lt;h2&gt;Search box&lt;/h2&gt; : หัวข้อของส่วนค้นหา คำสังใน tag
+                &lt;h2&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                &lt;form action="#"&gt;...&lt;/form&gt; :
+                ฟอร์มสำหรับส่งข้อมูลการค้นหาไปยัง URL ที่ระบุใน action attribute
+                (ในตัวอย่างนี้คือ # หมายความว่า
+                จะถูกส่งกลับไปยังหน้าเว็บที่กำลังแสดงอยู่ ณ ขณะนั้นเอง) คำสังใน
+                tag &lt;form&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                &lt;label for="site-search"&gt;ค้นหาในเว็บไซต์:&lt;/label&gt;:
+                ป้ายกำกับ (label) ที่เชื่อมโยงกับ input คำสังใน tag
+                &lt;label&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>tag input type search มี attribute ดังนี้</p>
+              <ul style="list-style: inside">
+                <li>
+                  id="site-search": กำหนด ID ที่ไม่ซ้ำกันให้กับอินพุต
+                  เพื่อให้สามารถเชื่อมโยงกับ &lt;label&gt; ได้
+                </li>
+                <li>
+                  name="q": กำหนดชื่อของอินพุต
+                  ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์
+                  ค่าที่ผู้ใช้ป้อนในช่องค้นหาจะถูกส่งไปพร้อมกับชื่อ q
+                </li>
+              </ul>
+
+              <p>
+                &lt;input type="submit"&gt; : ใช้สำหรับส่งฟอร์มเมื่อผู้ใช้คลิก
+                คำสังใน tag &lt;input type="submit"&gt; สามารถอ่านได้ใน html ที่
+                link ....
+              </p>
+
+              <p>
+                &lt;hr&gt;: ใช้สำหรับสร้างเส้นคั่นระหว่างบรรทัด (horizontal
+                rule)
+              </p>
+
+              <p>
+                &lt;h2&gt;Search results&lt;/h2&gt; :
+                หัวข้อผลลัพธ์การค้นหาของหน้าเว็บ คำสังใน tag &lt;h2&gt; เปิด และ
+                ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                &lt;p&gt;You have entered search terms:&lt;/p&gt; :
+                ข้อความแจ้งว่ากำลังแสดงผลลัพธ์ของคำค้นหา คำสังใน tag &lt;p&gt;
+                เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                &lt;div id="search-term"&gt;&lt;/div&gt; : div element
+                ที่ใช้สำหรับแสดงคำค้นหาที่ดึงมาจาก URL คำสังใน tag &lt;div&gt;
+                เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                &lt;p&gt;Since this is only a client-side HTML sample, we cannot
+                display actual search results.&lt;/p&gt; :
+                ข้อความอธิบายว่าโค้ดนี้ไม่ได้ทำการค้นหาจริง คำสังใน tag
+                &lt;p&gt; เปิด และ ปิด สามารถอ่านได้ใน html ที่ link ....
+              </p>
+
+              <p>
+                คำสังใน tag &lt;script&gt; เปิด และ ปิด สามารถอ่านได้ใน
+                javascript ที่ link ....
+              </p>
+
+              <div style="background-color: aqua">
+                <h2>Search box</h2>
+
+                <form action="#" autocomplete="on">
+                  <label for="site-search">Search on the website:</label>
+                  <input type="search" id="site-search" name="q" />
+                  <input type="submit" value="search" />
+                </form>
+
+                <hr />
+
+                <h2>Search results</h2>
+
+                <p>You have entered search terms:</p>
+                <div id="search-term"></div>
+
+                <p>
+                  Since this is only a client-side HTML sample, we cannot
+                  display actual search results.
+                </p>
+
+                <script>
+                  // ดึงค่าพารามิเตอร์ 'q' จาก URL
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const searchTerm = urlParams.get("q");
+
+                  // แสดงคำค้นหาใน div ที่มี id="search-term"
+                  if (searchTerm) {
+                    document.getElementById("search-term").textContent =
+                      searchTerm;
+                  } else {
+                    document.getElementById("search-term").textContent =
+                      "ไม่มีคำค้นหา";
+                  }
+                </script>
+                <br />
+              </div>
+
+              <p>
+                ก่อนพิมพ์ค้นหา จะไม่ข้อความ แสดงว่า ไม่มีคำค้นหา ที่หน้า page
+              </p>
+
+              <img src="/images/search1.png" alt="" />
+
+              <p>
+                สมุดว่า ผู้ใช้ พิมพ์ คำว่า google ในช่อง Search on the website
+                แล้ว กดปุ่ม search
+              </p>
+              <p>
+                แต่ถ้ากดปุ่ม x หมายความว่า ลบข้อความทั้งหมดที่ผู้ใช้พิมพ์ค้นหา
+              </p>
+
+              <img src="/images/search2.png" alt="" />
+
+              <p>
+                หลังจากผู้ใช้พิพม์ google แล้วกดปุ่ม search ให้ Developer มาดู
+                url
+              </p>
+              <p>ให้สังเกตุ url ตรง q จะแสดงเป็น q=google#</p>
+
+              <p>
+                url: ช่องสำหรับป้อน URL เบราว์เซอร์ส่วนใหญ่จะตรวจสอบรูปแบบ URL
+                เบื้องต้น
+              </p>
+
+              <p>
+                &lt;input type="url" /&gt; เป็นหนึ่งในประเภทของ &lt;input /&gt;
+                element ใน HTML5 ที่ออกแบบมาโดยเฉพาะสำหรับให้ผู้ใช้ป้อน Uniform
+                Resource Locator (URL) หรือที่เรียกกันทั่วไปว่า "ที่อยู่เว็บ"
+                เมื่อกำหนด type attribute เป็น url
+                เบราว์เซอร์จะแสดงช่องข้อความที่ได้รับการปรับแต่งสำหรับการป้อน
+                URL และโดยส่วนใหญ่จะมีการตรวจสอบความถูกต้องเบื้องต้นของรูปแบบ
+                URL โดยอัตโนมัติ
+              </p>
+
+              <p>ตัวอย่างการใช้งานพื้นฐาน ในระบบ android หรือ ios</p>
+
+              <img src="/images/url1.png" alt="" />
+
+              <p>
+                จากรูปตัวอย่างเป็น ระบบ android จะสังเกตุเห็นว่า keyboard
+                หน้าจอจะมีปุ่มกดที่เกี่ยวกับการป้อน url ให้สะดวก เช่น ปุ่มกด /
+                เป็นต้น
+              </p>
+
+              <div class="code-container">
+                <div class="code-header">
+                  <div class="logo">input type url</div>
+                  <button class="copy-button">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <div class="code-container">
+                  <pre class="code-block">
+                      <code>
+                          &lt;!DOCTYPE html&gt;<br>
+                          &lt;html lang="en"&gt;<br>
+                          &lt;head&gt;<br>
+                              &lt;title&gt;input type url&lt;/title&gt;<br>
+                          &lt;/head&gt;<br>
+                          &lt;body&gt;<br>
+                              
+                              &lt;h2&gt;Enter your website&lt;/h2&gt;
+
+                              &lt;form action="#" onsubmit="return validateURL()" novalidate &gt;
+                      
+                                &lt;label for="website"&gt;Website:&lt;/label&gt;
+                                &lt;input type="url" id="website" name="website" /&gt;
+                                &lt;span id="urlError" class="error"&gt;&lt;/span&gt;
+                                &lt;br&gt;&lt;br&gt;
+                                &lt;input type="submit" value="save"&gt;
+
+                              &lt;/form&gt;
+
+                              &lt;script&gt;
+                                  function validateURL() {
+                                      const urlInput = document.getElementById('website');
+                                      const urlError = document.getElementById('urlError');
+                                      const urlValue = urlInput.value.trim();
+
+                                      let isValid = true;
+                                      let errorMessage = "";
+
+                                      if (urlValue === "") {
+                                          errorMessage = "กรุณาป้อน URL";
+                                          isValid = false;
+                                      } else if (!urlValue.startsWith("http://") && !urlValue.startsWith("https://")) {
+                                          errorMessage = "กรุณาป้อน URL ที่ขึ้นต้นด้วย http:// หรือ https://";
+                                          isValid = false;
+                                      } else if (!isValidURLFormat(urlValue)) { // เพิ่มฟังก์ชันตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น
+                                          errorMessage = "รูปแบบ URL ไม่ถูกต้อง";
+                                          isValid = false;
+                                      }
+
+                                      urlError.textContent = errorMessage;
+                                      return isValid;
+                                  }
+
+                                  function isValidURLFormat(url) {
+                                      // Regular expression สำหรับตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น (ตัวอย่าง)
+                                      const urlRegex = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6}\.?)(\/[\w.-]*)*\/?$/i;
+                                      return urlRegex.test(url);
+                                  }
+                              &lt;/script&gt;                              
+
+                          &lt;/body&gt;<br>
+                          &lt;/html&gt;
+                      </code>
+                  </pre>
+                </div>
+              </div>
+
+              <p>
+                ในบทความนี้จะขออธิบายเฉพาะ tag input type url ส่วน tag อื่น ๆ
+                ของภาษา html สามารถเข้าไปอ่านแต่ละ tag ของ html ได้
+              </p>
+              <p>
+                และ ในส่วนคำสังในภาษา javascript ที่อยู่ใน script tag เปิด จนถึง
+                tag ปิด สามารถอ่านได้ที่ javascript
+              </p>
+
+              <p>tag input type url มี attribute ดังนี้</p>
+              <ul style="list-style: inside">
+                <li>
+                  id="website": กำหนด ID ที่ไม่ซ้ำกันให้กับอินพุต
+                  เพื่อให้สามารถเชื่อมโยงกับ &lt;label&gt; ได้
+                </li>
+                <li>
+                  name="website": กำหนดชื่อของอินพุต
+                  ซึ่งจะถูกใช้เมื่อส่งข้อมูลฟอร์มไปยังเซิร์ฟเวอร์
+                  ค่าที่ผู้ใช้ป้อนในช่องค้นหาจะถูกส่งไปพร้อมกับชื่อ website
+                </li>
+              </ul>
+
+              <div style="background-color: aqua">
+                <h2>Enter your website</h2>
+
+                <form action="#" onsubmit="return validateURL()" novalidate>
+                  <label for="website">Website:</label>
+                  <input type="url" id="website" name="website" />
+                  <span id="urlError" class="error"></span>
+                  <br /><br />
+                  <input type="submit" value="save" />
+                </form>
+
+                <script>
+                  function validateURL() {
+                    const urlInput = document.getElementById("website");
+                    const urlError = document.getElementById("urlError");
+                    const urlValue = urlInput.value.trim();
+
+                    let isValid = true;
+                    let errorMessage = "";
+
+                    if (urlValue === "") {
+                      errorMessage = "กรุณาป้อน URL";
+                      isValid = false;
+                    } else if (
+                      !urlValue.startsWith("http://") &&
+                      !urlValue.startsWith("https://")
+                    ) {
+                      errorMessage =
+                        "กรุณาป้อน URL ที่ขึ้นต้นด้วย http:// หรือ https://";
+                      isValid = false;
+                    } else if (!isValidURLFormat(urlValue)) {
+                      // เพิ่มฟังก์ชันตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น
+                      errorMessage = "รูปแบบ URL ไม่ถูกต้อง";
+                      isValid = false;
+                    }
+
+                    urlError.textContent = errorMessage;
+                    return isValid;
+                  }
+
+                  function isValidURLFormat(url) {
+                    // Regular expression สำหรับตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น (ตัวอย่าง)
+                    const urlRegex =
+                      /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6}\.?)(\/[\w.-]*)*\/?$/i;
+                    return urlRegex.test(url);
+                  }
+                </script>
+              </div>
+
+              <p>
+                เมื่อผู้ใช้ กรอกชื่อ website แต่ไม่มี https:// หรือ htttp://
+                และไม่มี นามสกุลของ website ก็จะมีข้อความเตือน ดังรูป
+              </p>
+
+              <img src="/images/url2.png" alt="" />
+
+              <p>
+                ถ้าผู้ใช้กรอกครบ เช่น www.langsmartit-kyhb.onrender.com
+                และกดปุ่ม save
+              </p>
+
+              <img src="/images/url3.png" alt="" />
+
+              <p>
+                ให้สังเกตุ url ตรง website จะแสดงเป็น
+                website=https%3A%2F%2Flangsmartit-kyhb.onrender.com%2F#
+              </p>
+              <p>มาดูความหมายแต่ละตัวกันดังนี้</p>
+              <ul style="list-style: inside">
+                <li>
+                  website=: ส่วนนี้คือชื่อของ query parameter ใน URL ครับ Query
+                  parameters ใช้สำหรับส่งข้อมูลจากฟอร์ม (หรือจากที่อื่น)
+                  ไปยังหน้าเว็บ เมื่อมีการ submit ฟอร์ม
+                  (ในกรณีที่เราคุยกันเรื่อง <input type="url" />)
+                  ข้อมูลที่อยู่ในช่อง <input /> ที่มี name="website"
+                  จะถูกส่งไปพร้อมกับ URL ในรูปแบบนี้
+                </li>
+                <li>
+                  https%3A%2F%2F: ส่วนนี้คือ ค่า ของ query parameter website
+                  ครับ มันคือ URL https:// แต่ถูก URL-encoded ครับ URL encoding
+                  เป็นวิธีการแปลงอักขระพิเศษใน URL ให้ปลอดภัยสำหรับการใช้งานใน
+                  URL โดยที่ : ถูกแปลงเป็น %3A และ / ถูกแปลงเป็น %2F
+                </li>
+                <li>
+                  langsmartit-kyhb.onrender.com: ส่วนนี้คือ โดเมน (domain) ของ
+                  URL ครับ มันระบุชื่อของเว็บไซต์ที่เรากำลังอ้างถึง
+                </li>
+                <li>
+                  /: สัญลักษณ์ / นี้อาจจะหมายถึง path (เส้นทาง)
+                  ไปยังหน้าเว็บหรือไฟล์บนเว็บไซต์ แต่ในกรณีนี้
+                  ดูเหมือนจะเป็นแค่สัญลักษณ์ / ที่ต่อท้ายโดเมน
+                  ซึ่งมักจะหมายถึงหน้าหลัก (root) ของเว็บไซต์
+                </li>
+                <li>
+                  #: สัญลักษณ์ # นี้เรียกว่า hash หรือ fragment identifier ครับ
+                  มันใช้เพื่อระบุส่วนใดส่วนหนึ่งของหน้าเว็บ (เช่น anchor link)
+                  แต่ในกรณีนี้ เนื่องจากมันอยู่ท้าย URL ที่ส่งมาจากฟอร์มที่มี
+                  action="#"
+                  มันไม่ได้มีความหมายในการระบุส่วนใดส่วนหนึ่งของหน้าเว็บครับ
+                  มันเป็นผลจากการที่เรากำหนด action="#"
+                  ซึ่งบอกให้ฟอร์มส่งข้อมูลกลับมาที่หน้าเดิม
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- meta -->
+          <div class="chapter_html">
+            <div class="chapter_head_html">
+              <h3>&lt;meta&gt;</h3>
+            </div>
+            <div class="section_html">
+              <p>
+                &lt;meta&gt;: ใช้สำหรับระบุข้อมูล metadata เกี่ยวกับเอกสาร HTML
+                เช่น charset, viewport, keywords, description
+              </p>
+            </div>
+          </div>
+
+          <!-- link -->
+          <div class="chapter_html">
+            <div class="chapter_head_html">
+              <h3>&lt;link&gt;</h3>
+            </div>
+            <div class="section_html">
+              <p>
+                &lt;link&gt;: ใช้สำหรับเชื่อมโยงไปยัง external resources ต่าง
+                ดังนี้
+              </p>
+
+              <ul style="list-style: decimal">
+                <li>เชื่อมโยงไปยังไฟล์ CSS (Cascading Style Sheets):</li>
+                <li>เชื่อมโยงไปยัง Favicon (Icon ที่แสดงบน Tab Browser):</li>
+                <li>เชื่อมโยงไปยัง Font จาก Google Fonts:</li>
+                <li>
+                  เชื่อมโยงไปยัง Manifest File สำหรับ Progressive Web App (PWA):
+                </li>
+                <li>
+                  เชื่อมโยงไปยัง Alternate Stylesheet
+                  (สำหรับสไตล์ที่ผู้ใช้เลือกได้):
+                </li>
+              </ul>
+
+              <p>
+                เชื่อมโยงไปยังไฟล์ CSS (Cascading Style Sheets):
+                การอธิบายวิธีการหรือคำสั่งที่ใช้ในการเชื่อมต่อหรืออ้างอิงไฟล์
+                Cascading Style Sheets (CSS) ในเอกสาร HTML
+              </p>
+
+              <p>
+                วิธีการเชื่อมโยงไฟล์ CSS (Cascading Style Sheets) มี 3 วิธี:
+              </p>
+              <ul style="list-style: decimal">
+                <li>
+                  External CSS: ใช้วิธีนี้โดยการสร้างไฟล์ CSS แยกต่างหาก
+                  (มีนามสกุล .css) และเชื่อมโยงไฟล์นั้นเข้ากับเอกสาร HTML
+                  โดยใช้แท็ก &lt;link&gt; ภายในส่วน &lt;head&gt; ของเอกสาร HTML
+                </li>
+
+                <div class="code-container">
+                  <div class="code-header">
+                    <div class="logo">Link External CSS:</div>
+                    <button class="copy-button">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="code-container">
+                    <pre class="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;title&gt;Link External CSS:&lt;/title&gt;<br>
+                                &lt;link rel="stylesheet" href="ชื่อไฟล์.css"&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+                  </div>
+                </div>
+
+                <p>
+                  ในตัวอย่างนี้ href="ชื่อไฟล์.css" จะระบุตำแหน่งของไฟล์ CSS
+                  ที่ต้องการเชื่อมโยง
+                </p>
+
+                <li>
+                  Internal CSS (Embedded CSS): ใช้วิธีนี้โดยการเขียนโค้ด CSS
+                  โดยตรงภายในแท็ก &lt;style&gt; ในส่วน &lt;head&gt; ของเอกสาร
+                  HTML
+                </li>
+
+                <div class="code-container">
+                  <div class="code-header">
+                    <div class="logo">Link Internal CSS:</div>
+                    <button class="copy-button">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="code-container">
+                    <pre class="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;title&gt;Link Internal CSS:&lt;/title&gt;<br>
+                                &lt;style&gt;
+                                  h1 {
+                                      color: blue;
+                                      text-align: center;
+                                  }
+                                  p {
+                                      font-size: 16px;
+                                  }
+                                &lt;/style>&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;h1&gt;หัวข้อ&lt;/h1&gt;
+                                &lt;p&gt;ข้อความย่อหน้า&lt;/p&gt;
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+                  </div>
+                </div>
+
+                <p>วิธีนี้เหมาะสำหรับสไตล์ที่ใช้เฉพาะในหน้า HTML นั้นๆ</p>
+
+                <li>
+                  Inline CSS: ใช้วิธีนี้โดยการเพิ่มแอตทริบิวต์ style
+                  โดยตรงให้กับแท็ก HTML แต่ละแท็ก
+                </li>
+
+                <div class="code-container">
+                  <div class="code-header">
+                    <div class="logo">Link Inline CSS:</div>
+                    <button class="copy-button">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="code-container">
+                    <pre class="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;title&gt;Link Inline CSS:&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;h1 style="color: green; text-decoration: underline;"&gt;หัวข้อ&lt;/h1&gt;
+                                &lt;p style="font-style: italic;"&gt;ข้อความย่อหน้า&lt;/p&gt;
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+                  </div>
+                </div>
+              </ul>
+
+              <p>
+                เชื่อมโยงไปยัง Favicon (Icon ที่แสดงบน Tab Browser):
+                การอธิบายวิธีการหรือคำสั่งที่ใช้ในการเชื่อมต่อหรือกำหนด Favicon
+                (เฟวิคอน) ให้กับเว็บไซต์ เพื่อให้แสดงเป็นไอคอนเล็กๆ
+                บนแท็บของเบราว์เซอร์
+              </p>
+
+              <p>
+                Favicon ย่อมาจาก "favorite icon" เป็นไอคอนขนาดเล็ก (โดยทั่วไปคือ
+                16x16 พิกเซล หรือ 32x32 พิกเซล) ที่แสดงอยู่ข้างๆ
+                ชื่อเว็บไซต์บนแท็บของเบราว์เซอร์ ในรายการบุ๊กมาร์ก
+                และในส่วนอื่นๆ ของอินเทอร์เฟซผู้ใช้ของเบราว์เซอร์
+              </p>
+
+              <div class="code-container">
+                <div class="code-header">
+                  <div class="logo">Link Favicon</div>
+                  <button class="copy-button">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <div class="code-container">
+                  <pre class="code-block">
+                      <code>
+                          &lt;!DOCTYPE html&gt;<br>
+                          &lt;html lang="en"&gt;<br>
+                          &lt;head&gt;<br>
+                              &lt;title&gt;Link Favicon&lt;/title&gt;<br>
+                              &lt;link rel="icon" href="path/to/favicon.ico" type="image/x-icon"&gt;<br>
+                              &lt;link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon"&gt;
+                          &lt;/head&gt;<br>
+                          &lt;body&gt;<br>
+
+                          &lt;/body&gt;<br>
+                          &lt;/html&gt;
+                      </code>
+                  </pre>
+                </div>
+              </div>
+
+              <ul style="list-style: inside">
+                <li>rel="icon": ระบุว่าลิงก์นี้คือไอคอนของเว็บไซต์</li>
+                <li>
+                  rel="shortcut icon":
+                  เป็นแอตทริบิวต์ที่ใช้กับเบราว์เซอร์รุ่นเก่าบางตัว
+                  เพื่อให้มั่นใจว่า Favicon จะแสดงผล
+                </li>
+                <li>
+                  href="path/to/favicon.ico": ระบุตำแหน่ง (พาธ) ของไฟล์ Favicon
+                  ไฟล์ Favicon มักจะมีนามสกุล .ico
+                  แต่เบราว์เซอร์สมัยใหม่หลายตัวก็รองรับไฟล์รูปแบบอื่นๆ เช่น .png
+                  และ .gif
+                </li>
+                <li>
+                  type="image/x-icon": ระบุประเภทของไฟล์ไอคอน (สำหรับไฟล์ .ico)
+                  หากใช้ไฟล์ .png ควรเปลี่ยนเป็น type="image/png"
+                </li>
+              </ul>
+              
             </div>
           </div>
         </div>

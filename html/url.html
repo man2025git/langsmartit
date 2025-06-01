@@ -1,0 +1,38 @@
+<form action="#" onsubmit="return validateURL()" novalidate>
+    </label>
+    <input type="url" id="website" name="website" value="www.langsmartit-kyhb.onrender.com">
+    <span id="urlError" class="error"></span>
+    <br><br>
+    <input type="submit" value="บันทึก">
+</form>
+
+<script>
+function validateURL() {
+    const urlInput = document.getElementById('website');
+    const urlError = document.getElementById('urlError');
+    const urlValue = urlInput.value.trim();
+
+    let isValid = true;
+    let errorMessage = "";
+
+    if (urlValue === "") {
+        errorMessage = "กรุณาป้อน URL";
+        isValid = false;
+    } else if (!urlValue.startsWith("http://") && !urlValue.startsWith("https://")) {
+        errorMessage = "กรุณาป้อน URL ที่ขึ้นต้นด้วย http:// หรือ https://";
+        isValid = false;
+    } else if (!isValidURLFormat(urlValue)) { // เพิ่มฟังก์ชันตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น
+        errorMessage = "รูปแบบ URL ไม่ถูกต้อง";
+        isValid = false;
+    }
+
+    urlError.textContent = errorMessage;
+    return isValid;
+}
+
+function isValidURLFormat(url) {
+    // Regular expression สำหรับตรวจสอบรูปแบบ URL ที่ซับซ้อนขึ้น (ตัวอย่าง)
+    const urlRegex = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6}\.?)(\/[\w.-]*)*\/?$/i;
+    return urlRegex.test(url);
+}
+</script>
