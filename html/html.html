@@ -8179,7 +8179,292 @@
                   หากใช้ไฟล์ .png ควรเปลี่ยนเป็น type="image/png"
                 </li>
               </ul>
-              
+
+              <p>เชื่อมโยงไปยัง Font จาก Google Fonts:</p>
+              <p>
+                ในยุคดิจิทัลที่เว็บไซต์เป็นเสมือนหน้าต่างของธุรกิจและตัวตน
+                การสร้างความประทับใจแรกเห็นเป็นสิ่งสำคัญอย่างยิ่ง
+                นอกเหนือจากเนื้อหาที่น่าสนใจแล้ว รูปแบบตัวอักษร (Font)
+                ก็มีบทบาทอย่างมากในการกำหนดภาพลักษณ์และความรู้สึกของเว็บไซต์
+                การเลือกใช้ฟอนต์ที่เหมาะสมไม่เพียงช่วยให้อ่านง่าย
+                แต่ยังสะท้อนถึงบุคลิกและสไตล์ที่เป็นเอกลักษณ์ของคุณได้อีกด้วย
+              </p>
+              <p>
+                หนึ่งในแหล่งรวมฟอนต์ยอดนิยมที่นักพัฒนาและนักออกแบบทั่วโลกต่างให้ความไว้วางใจคือ
+                Google Fonts
+                ด้วยคลังฟอนต์คุณภาพสูงจำนวนมากที่สามารถใช้งานได้ฟรีและง่ายดาย
+                Google Fonts
+                จึงเป็นตัวเลือกที่ไม่ควรพลาดสำหรับใครก็ตามที่ต้องการยกระดับความสวยงามของเว็บไซต์
+                วันนี้เราจะมาดูวิธีการเชื่อมโยงฟอนต์จาก Google Fonts
+                เข้าสู่เว็บไซต์ของคุณแบบง่ายๆ กันครับ
+              </p>
+              <p>ทำไมต้อง Google Fonts?</p>
+              <p>
+                ก่อนที่เราจะไปลงลึกถึงวิธีการเชื่อมโยง
+                มาทำความเข้าใจกันก่อนว่าทำไม Google Fonts ถึงเป็นตัวเลือกที่ดี:
+              </p>
+
+              <ul style="list-style: inside">
+                <li>
+                  ฟรีและเปิดกว้าง (Open Source): ฟอนต์ทั้งหมดบน Google Fonts
+                  สามารถใช้งานได้ฟรี ทั้งสำหรับส่วนบุคคลและเชิงพาณิชย์
+                </li>
+                <li>
+                  หลากหลายและมีคุณภาพ: มีฟอนต์ให้เลือกหลายร้อยแบบ
+                  ครอบคลุมหลายภาษาและสไตล์
+                </li>
+                <li>
+                  ประสิทธิภาพสูง: ฟอนต์จาก Google Fonts
+                  ถูกออกแบบมาให้โหลดได้อย่างรวดเร็ว ทำให้เว็บไซต์ของคุณไม่ช้าลง
+                </li>
+                <li>
+                  ใช้งานง่าย: มีเครื่องมือและโค้ดที่พร้อมใช้งาน
+                  ช่วยให้การนำฟอนต์ไปใช้เป็นเรื่องง่าย
+                </li>
+                <li>
+                  รองรับทุกเบราว์เซอร์:
+                  ฟอนต์ถูกปรับแต่งให้แสดงผลได้ดีบนเบราว์เซอร์และอุปกรณ์ที่หลากหลาย
+                </li>
+              </ul>
+
+              <div class="code-container">
+                <div class="code-header">
+                  <div class="logo">Link Google Fonts</div>
+                  <button class="copy-button">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <div class="code-container">
+                  <pre class="code-block">
+                      <code>
+                          &lt;!DOCTYPE html&gt;<br>
+                          &lt;html lang="en"&gt;<br>
+                          &lt;head&gt;<br>
+                              &lt;title&gt;Link Google Fonts&lt;/title&gt;<br>
+                              &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+                              &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+                              &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>
+                          &lt;/head&gt;<br>
+                          &lt;body&gt;<br>
+
+                          &lt;/body&gt;<br>
+                          &lt;/html&gt;
+                      </code>
+                  </pre>
+                </div>
+              </div>
+
+              <ul style="list-style: inside">
+                <li>
+                  &lt;link rel="preconnect"
+                  href="https://fonts.googleapis.com"&gt;: บอก browser
+                  ให้ทำการเชื่อมต่อล่วงหน้ากับ fonts.googleapis.com
+                  เพื่อให้การดาวน์โหลด font เร็วขึ้น
+                </li>
+                <li>
+                  &lt;rel="preconnect" href="https://fonts.gstatic.com"
+                  crossorigin&gt;: บอก browser ให้ทำการเชื่อมต่อล่วงหน้ากับ
+                  fonts.gstatic.com (ซึ่งมักจะเป็นที่เก็บไฟล์ font จริง) และระบุ
+                  crossorigin attribute เพื่อจัดการกับ CORS (Cross-Origin
+                  Resource Sharing)
+                </li>
+                <li>
+                  &lt;link
+                  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+                  rel="stylesheet"&gt;: เชื่อมโยงไปยังไฟล์ CSS ที่ Google Fonts
+                  สร้างขึ้น ซึ่งจะกำหนดการใช้งาน font Roboto ในรูปแบบตัวหนา 400
+                  และ 700
+                </li>
+              </ul>
+
+              <p>
+                เชื่อมโยงไปยัง Manifest File สำหรับ Progressive Web App (PWA):
+              </p>
+              <p>Web App Manifest File คืออะไร?</p>
+              <p>
+                Web App Manifest File คือไฟล์ JSON ที่ให้ข้อมูลเกี่ยวกับ PWA
+                ของคุณกับเบราว์เซอร์
+                ซึ่งข้อมูลเหล่านี้จะถูกนำไปใช้เพื่อกำหนดลักษณะการทำงานและรูปลักษณ์ของ
+                PWA เมื่อผู้ใช้เพิ่มแอปพลิเคชันของคุณไปยังหน้าจอหลัก (Home
+                Screen) หรือเรียกใช้จากตัวเปิดแอปพลิเคชัน (App Launcher)
+              </p>
+              <p>ข้อมูลที่ Manifest File มักจะประกอบด้วย ได้แก่:</p>
+              <ul style="list-style: inside">
+                <li>name: ชื่อเต็มของแอปพลิเคชัน</li>
+                <li>short_name: ชื่อย่อที่ปรากฏบนหน้าจอหลัก</li>
+                <li>start_url: URL ที่จะเปิดขึ้นเมื่อผู้ใช้เรียกใช้แอป</li>
+                <li>
+                  display: โหมดการแสดงผลของแอป (เช่น fullscreen, standalone,
+                  minimal-ui, browser)
+                </li>
+                <li>
+                  background_color: สีพื้นหลังของหน้าจอเปิดตัว (splash screen)
+                </li>
+                <li>
+                  theme_color: สีธีมของแอปพลิเคชัน (เช่น
+                  สีของแถบสถานะของเบราว์เซอร์)
+                </li>
+                <li>
+                  icons:
+                  อาร์เรย์ของวัตถุที่ระบุขนาดและที่ตั้งของไอคอนแอปพลิเคชันในขนาดต่างๆ
+                </li>
+                <li>description: คำอธิบายสั้นๆ ของแอป</li>
+                <li>
+                  orientation: ทิศทางเริ่มต้นของหน้าจอ (เช่น portrait,
+                  landscape)
+                </li>
+              </ul>
+              <p>ทำไม Manifest File ถึงสำคัญ?</p>
+              <p>
+                Manifest File เป็นหัวใจสำคัญที่ทำให้ PWA
+                สามารถมอบประสบการณ์ที่ใกล้เคียงกับแอปพลิเคชัน Native ได้
+                เพราะมันเป็นส่วนที่:
+              </p>
+              <ul style="list-style: decimal">
+                <li>
+                  ทำให้สามารถ "Add to Home Screen" ได้: เบราว์เซอร์จะอ่าน
+                  Manifest File เพื่อแสดงตัวเลือกให้ผู้ใช้สามารถติดตั้ง PWA
+                  ของคุณไปยังหน้าจอหลักได้
+                </li>
+                <li>
+                  สร้าง Splash Screen: เมื่อผู้ใช้เปิด PWA เบราว์เซอร์จะใช้
+                  name, background_color และ icons จาก Manifest File
+                  เพื่อสร้างหน้าจอเริ่มต้น (splash screen) ที่สวยงาม
+                  ทำให้การเปิดแอปดูรวดเร็วและเป็นมืออาชีพมากขึ้น
+                </li>
+                <li>
+                  กำหนดรูปลักษณ์และการทำงานของแอป: display, theme_color และ
+                  orientation จะช่วยกำหนดว่า PWA
+                  ของคุณจะแสดงผลอย่างไรเมื่อเปิดใช้งาน และช่วยให้ PWA
+                  กลมกลืนไปกับระบบปฏิบัติการของผู้ใช้มากขึ้น
+                </li>
+                <li>
+                  เพิ่ม SEO และการค้นพบ: การมี Manifest File
+                  ที่ถูกต้องช่วยให้เครื่องมือค้นหาและแพลตฟอร์มต่างๆ เข้าใจ PWA
+                  ของคุณได้ดีขึ้น ซึ่งอาจช่วยเพิ่มการมองเห็นและการค้นพบได้
+                </li>
+              </ul>
+              <p>วิธีเชื่อมโยง Manifest File เข้าสู่เว็บไซต์ของคุณ</p>
+              <p>
+                การเชื่อมโยง Manifest File เข้ากับหน้าเว็บของคุณนั้นง่ายดายมาก
+                เพียงแค่เพิ่มแท็ก &lt;link&gt; เพียงบรรทัดเดียวในส่วน
+                &lt;head&gt; ของไฟล์ HTML
+                ทุกหน้าที่คุณต้องการให้เป็นส่วนหนึ่งของ PWA
+              </p>
+              <ul style="list-style: decimal">
+                <li>
+                  สร้าง Manifest File: ขั้นแรก คุณต้องสร้างไฟล์ manifest.json
+                  (หรือชื่ออื่นที่คุณต้องการ เช่น app.webmanifest)
+                  และวางไว้ที่ไดเรกทอรีรูท (root directory) ของเว็บไซต์ของคุณ
+                  ไฟล์นี้ควรมีโครงสร้าง JSON ดังตัวอย่าง:
+                </li>
+
+                <div class="code-container">
+                  <div class="code-header">
+                    <div class="logo">JSON</div>
+                    <button class="copy-button">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="code-container">
+                    <pre class="code-block">
+                      <code>
+                          {
+                            "name": "My Awesome PWA",
+                            "short_name": "Awesome PWA",
+                            "start_url": ".",
+                            "display": "standalone",
+                            "background_color": "#ffffff",
+                            "theme_color": "#2196F3",
+                            "description": "A fantastic Progressive Web App example.",
+                            "icons": [
+                              {
+                                "src": "/images/icons/icon-192x192.png",
+                                "sizes": "192x192",
+                                "type": "image/png"
+                              },
+                              {
+                                "src": "/images/icons/icon-512x512.png",
+                                "sizes": "512x512",
+                                "type": "image/png"
+                              }
+                            ]
+                          }
+                      </code>
+                  </pre>
+                  </div>
+                </div>
+
+                <li>
+                  เชื่อมโยงใน HTML: จากนั้น ให้เพิ่มแท็ก &lt;link&gt; ในส่วน
+                  &lt;head&gt; ของไฟล์ HTML ของคุณ:
+                </li>
+
+                <ul style="list-style: inside">
+                  <li>
+                    rel="manifest": แอตทริบิวต์นี้ระบุว่าไฟล์ที่เชื่อมโยงคือ Web
+                    App Manifest
+                  </li>
+                  <li>
+                    href="/manifest.json": ระบุที่อยู่ของไฟล์ Manifest ของคุณ
+                    แนะนำให้วางไว้ที่ root directory
+                    ของโปรเจกต์เพื่อให้เข้าถึงได้ง่ายและถูกต้อง
+                  </li>
+                </ul>
+
+                <div class="code-container">
+                  <div class="code-header">
+                    <div class="logo">Link Manifest File</div>
+                    <button class="copy-button">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="code-container">
+                    <pre class="code-block">
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &lt;head&gt;<br>
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                                &lt;title&gt;Link Manifest File&lt;/title&gt;<br>
+                                &lt;link rel="manifest" href="/manifest.json"&gt;
+                                &lt;meta name="theme-color" content="#2196F3"&gt;
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                                &lt;h1&gt;Welcome to My PWA!&lt;/h1&gt;
+                                &lt;p&gt;This is a Progressive Web App.&lt;/p&gt;
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+                  </div>
+                </div>
+
+                <p>ข้อควรพิจารณาเพิ่มเติม</p>
+
+                <ul style="list-style: inside">
+                  <li>
+                    Service Worker: Manifest File ทำงานร่วมกับ Service Worker
+                    ซึ่งเป็นสคริปต์ที่จัดการการแคช (caching)
+                    และการทำงานแบบออฟไลน์ของ PWA อย่าลืมว่าการมีแค่ Manifest
+                    File อย่างเดียวไม่เพียงพอที่จะทำให้ PWA ทำงานแบบออฟไลน์ได้
+                    คุณต้องมีการลงทะเบียน Service Worker ด้วย
+                  </li>
+                  <li>
+                    HTTPS: PWA ต้องการการเชื่อมต่อแบบ HTTPS
+                    เพื่อความปลอดภัยและเพื่อให้ Service Worker
+                    ทำงานได้อย่างถูกต้อง
+                  </li>
+                  <li>
+                    ทดสอบ PWA ของคุณ:
+                    ใช้เครื่องมือสำหรับนักพัฒนาซอฟต์แวร์ของเบราว์เซอร์ (เช่น
+                    Lighthouse ใน Chrome DevTools) เพื่อตรวจสอบว่า Manifest File
+                    ของคุณได้รับการเชื่อมโยงอย่างถูกต้องและ PWA
+                    ของคุณมีคุณสมบัติตรงตามเกณฑ์ที่กำหนด
+                  </li>
+                </ul>
+              </ul>
             </div>
           </div>
         </div>
