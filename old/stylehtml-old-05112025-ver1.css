@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+SK:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    /* transition: all 0.2s linear; */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "html"
+        "footer";
+}
+
+.header_menu {
+    /* background-color: blue; */
+    grid-area: header;
+    width: 100%;
+    height: 10vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    color: white;
+    display: block;
+}
+
+.menubar {
+    width: 100%;
+    height: 10vh;
+    /* background-color: #eee; */
+    margin: 0;
+    padding: 0 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    gap: 5px;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+}
+
+.logo a span {
+    color: white;
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.logo .navbartogger {
+    display: none;
+}
+
+.navbarmenu {
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.navbarmenu ul {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.navbarmenu ul li a {
+    color: #fff;
+}
+
+.navbarmenu ul li a .un {
+    /* color: black; */
+    color: white;
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 550;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.navbarmenu ul li a .un::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: -5px;
+    background-color: white;
+    transition: 300ms;
+}
+
+.navbarmenu ul li .un:hover::after {
+    width: 100%;
+}
+
+.html_main {
+    background: #e6e6e6;
+    grid-area: html;
+    width: 100%;
+    height: 100%;
+    padding: 0 100px;
+}
+
+.heading_html{
+    /* background: yellow; */
+    text-align: center;
+}
+
+.heading_html h2{
+    font-size: 3rem;
+    text-decoration: underline;
+    padding: 10px 0;
+}
+
+.code-container {
+    /* background-color: #1e1e1e; */
+    background-color: #f0f4f9;
+    /* สีพื้นหลัง */
+    border-radius: 5px;
+    /* ขอบโค้งมน */
+    margin-bottom: 1em;
+    width: 80%;
+    /* กำหนดความกว้างของกรอบ */
+    max-width: 700px;
+    /* กำหนดความกว้างสูงสุด */
+    overflow: hidden;
+    /* border: 1px solid #333; */
+    /* เพิ่มขอบสีเทาเข้ม */
+}
+
+.code-header {
+    /* background-color: #252526; */
+    background-color: #f0f4f9;
+    /* สีพื้นหลังส่วนหัว */
+    /* color: #d4d4d4; */
+    color: #000;
+    /* สีข้อความในส่วนหัว */
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #3e3e3e; */
+    border-bottom: 1px solid #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 0.9em;
+    /* ขนาดตัวอักษรโลโก้ */
+}
+
+.copy-button i {
+    font-size: 1.2em;
+    /* ปรับขนาดไอคอน */
+    color: #000;
+    /* color: #d4d4d4; */
+    /* ปรับสีไอคอน */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.copy-button:hover i {
+    opacity: .2;
+}
+
+.copy-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.copy-button img {
+    width: 20px;
+    /* ขนาดความกว้างของไอคอน */
+    height: 20px;
+    /* ขนาดความสูงของไอคอน */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.copy-button img:hover {
+    opacity: 1;
+}
+
+.code-block {
+    padding: 12px;
+    overflow-x: auto;
+    font-family: monospace, monospace;
+    color: #000;
+    /* color: #dcdcaa; */
+    /* สีข้อความโค้ด */
+    white-space: pre-wrap;
+    font-size: 0.85em;
+    /* ขนาดตัวอักษรโค้ด */
+    line-height: 1.4;
+    /* ระยะห่างบรรทัด */
+}
+
+.code-block code {
+    display: block;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    grid-area: footer;
+}
+
+
+@media (max-width: 800px) {
+
+    /* .grid-container{
+        display: none;
+    } */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header_menu {
+        display: block;
+        margin-bottom: 300px;
+    }
+
+    .header_menu.active {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .menubar {
+        /* background-color: aqua; */
+        display: block;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        justify-content: space-between;
+    }
+
+    .logo .navbartogger {
+        display: flex;
+    }
+
+    .navbarmenu ul {
+        background-color: rgba(81, 77, 77, 0.419);
+        border-radius: 10px;
+        margin: 30px;
+        display: block;
+        text-align: center;
+    }
+    
+    .navbarmenu ul.active {
+        display: none;
+    }
+
+    /* .navbarmenu ul {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+    } */
+
+    .navbarmenu ul li {
+        margin: 5px;
+        padding: 2px;
+        /* cursor: pointer; */
+    }    
+    .navbarmenu ul li a {
+        /* color: #fff; */
+        /* cursor: pointer; */
+    }
+    
+    .navbarmenu ul li a .un {
+        /* color: black; */
+        color: white;
+        padding: 5px;
+        font-size: 2rem;
+        font-weight: 550;
+        text-transform: capitalize;
+        display: inline-block;
+        /* cursor: pointer; */
+    }
+    
+    .navbarmenu ul li a .un::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: -5px;
+        background-color: white;
+        transition: 300ms;
+    }
+    
+    .navbarmenu ul li .un:hover::after {
+        width: 100%;
+    }
+
+    .menuopen {
+        display: flex;
+        margin-top: 6px;
+        cursor: pointer;
+    }
+
+    .menuopen.active {
+        display: none;
+        margin-top: 6px;
+    }
+
+    .menuclose {
+        display: flex;
+        cursor: pointer;
+    }
+    
+    .menuclose img {
+        width: 50px;
+        height: 55px;
+        margin-top: -8px;
+        margin-right: -15px;
+    }
+
+    .menuclose.active {
+        display: none;
+    }
+
+
+}

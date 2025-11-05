@@ -7,7 +7,8 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 // require("/xampp/htdocs/langit/vendor/autoload.php"); // ใช้งานใน xampp
-require(__DIR__ . "/vendor/autoload.php"); // ใช้งานที่ host
+require(__DIR__ . "/vendor/autoload.php"); // ใช้งานที่ host render
+// require 'vendor/autoload.php'; // ใช้งานที่ host InfinityFree
 header('Content-Type: application/json');
 
 // 1. กำหนดค่าเริ่มต้นของ Object ที่จะส่งกลับ
